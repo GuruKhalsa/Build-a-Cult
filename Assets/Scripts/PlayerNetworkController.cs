@@ -19,11 +19,11 @@ public class PlayerNetworkController : Photon.MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		if (!photonView.isMine)
-		{
-			transform.position = Vector3.Lerp(transform.position, this.correctPlayerPos, Time.deltaTime * 5);
-			transform.rotation = Quaternion.Lerp(transform.rotation, this.correctPlayerRot, Time.deltaTime * 5);
-		}
+//		if (!photonView.isMine)
+//		{
+//			transform.position = Vector3.Lerp(transform.position, this.correctPlayerPos, Time.deltaTime * 5);
+//			transform.rotation = Quaternion.Lerp(transform.rotation, this.correctPlayerRot, Time.deltaTime * 5);
+//		}
 	}
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -37,8 +37,10 @@ public class PlayerNetworkController : Photon.MonoBehaviour {
 		else
 		{
 			// Network player, receive data
-			this.correctPlayerPos = (Vector3) stream.ReceiveNext();
-			this.correctPlayerRot = (Quaternion) stream.ReceiveNext();
+//			this.correctPlayerPos = (Vector3) stream.ReceiveNext();
+//			this.correctPlayerRot = (Quaternion) stream.ReceiveNext();
+			this.transform.position = (Vector3) stream.ReceiveNext();
+			this.transform.rotation = (Quaternion) stream.ReceiveNext();
 		}
 	}
 }
