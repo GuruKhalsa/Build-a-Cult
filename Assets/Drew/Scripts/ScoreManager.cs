@@ -7,7 +7,7 @@ namespace AssemblyCSharp
 	public class ScoreManager : MonoBehaviour
 	{
 		public Text scoreText;
-		public static int score = 0;
+		static int score = 0;
 
 		void Awake ()
 		{
