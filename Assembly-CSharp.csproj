@@ -52,6 +52,7 @@
      <Compile Include="Assets\Drew\Scripts\Runtime.cs" />
      <Compile Include="Assets\Drew\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Drew\Scripts\StartManager.cs" />
+     <Compile Include="Assets\Drew\Scripts\StateManager.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />

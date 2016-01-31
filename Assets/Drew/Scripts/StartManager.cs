@@ -17,8 +17,12 @@ public class StartManager : MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.Return)) {
 			canvas.enabled = false;
-			anim.SetTrigger ("NewGame");
+			triggerNewGame ();
 		}
-	
+	}
+
+	public void triggerNewGame ()
+	{
+		anim.SetTrigger ("NewGame");
 	}
 }
