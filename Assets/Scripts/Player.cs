@@ -18,16 +18,17 @@ public class Player : MonoBehaviour
 	private GameObject heldItem;
 	private Vector3 movement;
 
+	public Slider healthSlider;
+	public Slider magicSlider;
+
 	void Awake ()
 	{
-	
 		npcText = GameObject.Find ("NPC Text");
 
 		cc = GetComponent<CharacterController> ();
 		ci = GetComponent<ControllerInput> ();
 
 		Camera.main.GetComponent<Follow> ().followedObject = transform;
-	
 	}
 		
 	// Use this for initialization
@@ -44,13 +45,10 @@ public class Player : MonoBehaviour
 		
 		//		return;
 		//	}
-
 	
 		gravity ();
 		
 		jumpLerp ();
-
-
 
 		if (ci.JumpDown () && cc.isGrounded) {
 			
@@ -65,20 +63,11 @@ public class Player : MonoBehaviour
 		movement = new Vector3 (ci.movementX () * speed, jumpLerped, 0f);
 
 		cc.Move (movement * Time.deltaTime);
-
 	}
 
 	void gravity ()
 	{
-
-
-
-		
 		cc.Move (Vector3.down * 18f * Time.deltaTime);
-		
-		
-
-
 	}
 
 	void jumpLerp ()
@@ -126,7 +115,7 @@ public class Player : MonoBehaviour
 
 
 				}
-			} else	if (heldItem != null) {
+			} else if (heldItem != null) {
 				
 				heldItem.transform.parent = null;
 				heldItem.GetComponent<Rigidbody> ().isKinematic = false;
@@ -148,7 +137,7 @@ public class Player : MonoBehaviour
 		}
 		
 	}
-	
+
 	void OnTriggerExit (Collider col)
 	{
 		

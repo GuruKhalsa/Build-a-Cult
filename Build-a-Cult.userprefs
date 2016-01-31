@@ -1,0 +1,41 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Build-a-Cult" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="_CompletedAssets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="Managers" expanded="True">
+                    <Node name="ScoreManager.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True" />
+              <Node name="Standard Assets" expanded="True">
+                <Node name="Cameras" expanded="True" />
+                <Node name="Characters" expanded="True">
+                  <Node name="FirstPersonCharacter" expanded="True" />
+                  <Node name="RollerBall" expanded="True" />
+                  <Node name="ThirdPersonCharacter" expanded="True" />
+                </Node>
+                <Node name="CrossPlatformInput" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="Build-a-Cult" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

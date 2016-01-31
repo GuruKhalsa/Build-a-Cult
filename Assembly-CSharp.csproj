@@ -45,14 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Kuri\ControllerInput.cs" />
-     <Compile Include="Assets\Kuri\Detection.cs" />
-     <Compile Include="Assets\Kuri\Door.cs" />
-     <Compile Include="Assets\Kuri\Follow.cs" />
-     <Compile Include="Assets\Kuri\GameEngine.cs" />
-     <Compile Include="Assets\Kuri\Item.cs" />
-     <Compile Include="Assets\Kuri\NPC.cs" />
-     <Compile Include="Assets\Kuri\Player.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
@@ -112,7 +104,15 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\Scripts\ControllerInput.cs" />
+     <Compile Include="Assets\Scripts\Detection.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\Follow.cs" />
+     <Compile Include="Assets\Scripts\GameEngine.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\NPC.cs" />
      <Compile Include="Assets\Scripts\NetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerNetworkController.cs" />
      <Compile Include="Assets\Scripts\SmoothCamera2D.cs" />
      <Compile Include="Assets\Scripts\updateCultSize.cs" />
