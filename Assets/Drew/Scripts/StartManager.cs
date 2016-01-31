@@ -4,6 +4,7 @@ using System.Collections;
 public class StartManager : MonoBehaviour
 {
 	public Animator anim;
+	public StateManager state;
 	Canvas canvas;
 
 	// Use this for initialization

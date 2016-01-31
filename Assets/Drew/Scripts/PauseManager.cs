@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
-using System;
 
 public class PauseManager : MonoBehaviour
 {
@@ -27,10 +25,10 @@ public class PauseManager : MonoBehaviour
 
 	public void Quit ()
 	{
-		#if UNITY_EDITOR
-		EditorApplication.isPlaying = false;
-		#else 
-			Application.Quit();
-		#endif
+//#if UNITY_EDITOR
+//		EditorApplication.isPlaying = false;
+//#else 
+		Application.Quit ();
+//#endif
 	}
 }
