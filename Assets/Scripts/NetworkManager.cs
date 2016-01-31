@@ -28,7 +28,7 @@ public class NetworkManager : Photon.PunBehaviour {
 
 	public override void OnJoinedRoom ()
 	{
-		Vector3 startingLocation = new Vector3(-0.31f, 2.871971f, -3.15868f);
+		Vector3 startingLocation = new Vector3(-0.31f, 4f, -3.15868f);
 		GameObject leader = PhotonNetwork.Instantiate("Leader", startingLocation, Quaternion.identity, 0);
 		if(leader.GetPhotonView().isMine){
 			mainCam.GetComponent<SmoothCamera2D>().target = leader.transform;
