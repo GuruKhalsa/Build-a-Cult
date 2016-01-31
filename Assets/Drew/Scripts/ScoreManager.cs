@@ -11,7 +11,6 @@ namespace AssemblyCSharp
 
 		void Awake ()
 		{
-			scoreText = GetComponent<Text> ();
 		}
 
 		// Use this for initialization
