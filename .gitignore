@@ -4,6 +4,7 @@
 Temp/
 Library/
 *.userprefs
+*.app/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
