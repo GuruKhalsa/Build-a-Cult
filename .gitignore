@@ -3,6 +3,7 @@
 # =============== #
 Temp/
 Library/
+*.userprefs
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
