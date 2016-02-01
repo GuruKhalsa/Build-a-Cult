@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerNetworkController : Photon.MonoBehaviour {
-	public delegate void Respawn(float time);
+public class PlayerNetworkController : Photon.MonoBehaviour
+{
+	public delegate void Respawn (float time);
+
 	public event Respawn RespawnMe;
+
 	PhotonView photonView;
 	Vector3 correctPlayerPos;
 	Quaternion correctPlayerRot;
@@ -18,35 +21,34 @@ public class PlayerNetworkController : Photon.MonoBehaviour {
 	bool initialLoad = true;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		this.latestCorrectPos = transform.position;
 		this.onUpdatePos = transform.position;
 
-		photonView = GetComponent<PhotonView>();
-		if(photonView.isMine)
-		{
-			GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().enabled = true;
-			GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = true;
-			GetComponent<Interactable>().enabled = true;
-			GetComponent<Rigidbody>().isKinematic = false;
+		photonView = GetComponent<PhotonView> ();
+		if (photonView.isMine) {
+			GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter> ().enabled = true;
+			GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl> ().enabled = true;
+			GetComponent<Interactable> ().enabled = true;
+			GetComponent<Rigidbody> ().isKinematic = false;
 		}
 //		gameObject.GetComponent<Rigidbody>().centerOfMass = new Vector3(0.0f, -0.3f,0.0f);
 	}
 	
 	// Update is called once per frame
-//	void Update()
-//	{
-//		if (!photonView.isMine)
-//		{
-////			StartCoroutine("UpdateData");
-//			transform.position = Vector3.Lerp(transform.position, this.correctPlayerPos, Time.deltaTime * 5);
-//			transform.rotation = Quaternion.Lerp(transform.rotation, this.correctPlayerRot, Time.deltaTime * 5);
-//		}
-//	}
-	public void Update()
+	//	void Update()
+	//	{
+	//		if (!photonView.isMine)
+	//		{
+	////			StartCoroutine("UpdateData");
+	//			transform.position = Vector3.Lerp(transform.position, this.correctPlayerPos, Time.deltaTime * 5);
+	//			transform.rotation = Quaternion.Lerp(transform.rotation, this.correctPlayerRot, Time.deltaTime * 5);
+	//		}
+	//	}
+	public void Update ()
 	{
-		if (this.photonView.isMine)
-		{
+		if (this.photonView.isMine) {
 			return;     // if this object is under our control, we don't need to apply received position-updates 
 		}
 
@@ -61,68 +63,65 @@ public class PlayerNetworkController : Photon.MonoBehaviour {
 		// We want it to take a bit longer, so we multiply with 9 instead!
 
 		this.fraction = this.fraction + Time.deltaTime * 9;
-		transform.localPosition = Vector3.Lerp(this.onUpdatePos, this.latestCorrectPos, this.fraction); // set our pos between A and B
+		transform.localPosition = Vector3.Lerp (this.onUpdatePos, this.latestCorrectPos, this.fraction); // set our pos between A and B
 	}
 
-//	IEnumerator UpdateData()
-//	{
-//		if(initialLoad)
-//		{
-//			initialLoad = false;
-//			transform.position = position;
-//			transform.rotation = rotation;
-//
-//			//      mainCam.rotation = mainCamRotation;
-//			//      mainCam.Rotate(0, mainCamRotation.y, 0);
-//
-//		}
-//
-//		while(true)
-//		{
-//			transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * smoothing);
-//			transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * smoothing);
-//			//      mainCam.rotation = Quaternion.Lerp(mainCam.rotation, mainCamRotation, Time.deltaTime * smoothing);
-//			yield return null;
-//		}
-//	}
+	//	IEnumerator UpdateData()
+	//	{
+	//		if(initialLoad)
+	//		{
+	//			initialLoad = false;
+	//			transform.position = position;
+	//			transform.rotation = rotation;
+	//
+	//			//      mainCam.rotation = mainCamRotation;
+	//			//      mainCam.Rotate(0, mainCamRotation.y, 0);
+	//
+	//		}
+	//
+	//		while(true)
+	//		{
+	//			transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * smoothing);
+	//			transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * smoothing);
+	//			//      mainCam.rotation = Quaternion.Lerp(mainCam.rotation, mainCamRotation, Time.deltaTime * smoothing);
+	//			yield return null;
+	//		}
+	//	}
 
-//	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-//	{
-//		if (stream.isWriting)
-//		{
-//			// We own this player: send the others our data
-//			stream.SendNext(transform.position);
-//			stream.SendNext(transform.rotation);
-//			stream.SendNext(health);
-//		}
-//		else
-//		{
-//			// Network player, receive data
-////			this.correctPlayerPos = (Vector3) stream.ReceiveNext();
-////			this.correctPlayerRot = (Quaternion) stream.ReceiveNext();
-//			this.transform.position = (Vector3) stream.ReceiveNext();
-//			this.transform.rotation = (Quaternion) stream.ReceiveNext();
-//			health = (float)stream.ReceiveNext();
-//		}
-//	}
+	//	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	//	{
+	//		if (stream.isWriting)
+	//		{
+	//			// We own this player: send the others our data
+	//			stream.SendNext(transform.position);
+	//			stream.SendNext(transform.rotation);
+	//			stream.SendNext(health);
+	//		}
+	//		else
+	//		{
+	//			// Network player, receive data
+	////			this.correctPlayerPos = (Vector3) stream.ReceiveNext();
+	////			this.correctPlayerRot = (Quaternion) stream.ReceiveNext();
+	//			this.transform.position = (Vector3) stream.ReceiveNext();
+	//			this.transform.rotation = (Quaternion) stream.ReceiveNext();
+	//			health = (float)stream.ReceiveNext();
+	//		}
+	//	}
 
-	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	public void OnPhotonSerializeView (PhotonStream stream, PhotonMessageInfo info)
 	{
-		if (stream.isWriting)
-		{
+		if (stream.isWriting) {
 			Vector3 pos = transform.localPosition;
 			Quaternion rot = transform.localRotation;
-			stream.Serialize(ref pos);
-			stream.Serialize(ref rot);
-		}
-		else
-		{
+			stream.Serialize (ref pos);
+			stream.Serialize (ref rot);
+		} else {
 			// Receive latest state information
 			Vector3 pos = Vector3.zero;
 			Quaternion rot = Quaternion.identity;
 
-			stream.Serialize(ref pos);
-			stream.Serialize(ref rot);
+			stream.Serialize (ref pos);
+			stream.Serialize (ref rot);
 
 			this.latestCorrectPos = pos;                // save this to move towards it in FixedUpdate()
 			this.onUpdatePos = transform.localPosition; // we interpolate from here to latestCorrectPos
@@ -132,17 +131,15 @@ public class PlayerNetworkController : Photon.MonoBehaviour {
 		}
 	}
 
-
 	[PunRPC]
-	public void GetHit(float damage, string enemyName)
+	public void GetHit (float damage, string enemyName)
 	{
 		health -= damage;
-		if(health <= 0 && photonView.isMine)
-		{
-			Debug.Log(PhotonNetwork.player.name + " was killed by " + enemyName);
+		if (health <= 0 && photonView.isMine) {
+			Debug.Log (PhotonNetwork.player.name + " was killed by " + enemyName);
 
-			if(RespawnMe != null)
-				RespawnMe(3f);
+			if (RespawnMe != null)
+				RespawnMe (3f);
 			PhotonNetwork.Destroy (gameObject);
 		}
 	}
