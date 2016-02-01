@@ -24,6 +24,7 @@ public class StartManager : MonoBehaviour
 
 	public void triggerNewGame ()
 	{
+		Debug.Log ("start");
 		anim.SetTrigger ("NewGame");
 	}
 }
