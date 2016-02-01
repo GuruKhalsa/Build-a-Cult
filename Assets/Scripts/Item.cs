@@ -25,10 +25,12 @@ public class Item : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	}
 
-
-
-
+	void OnTriggerEnter (Collider col)
+	{
+		if(col.GetComponent<NPC>()){
+			Debug.Log("Bumped into NPC");
+		}
 	}
 }

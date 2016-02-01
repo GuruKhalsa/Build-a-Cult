@@ -5,7 +5,39 @@ using System.Net.NetworkInformation;
 
 namespace AssemblyCSharp
 {
+
+	private bool isGrounded;
+	private CharacterController cc;
+	private ControllerInput ci;
+	private float speed = 12.7f;
+	private float jumpLerped = 0f;
+	private float jumpLerpTime = 1f;
+	private float jumpHeight = 40f;
+	public string npcTextToShow = "test";
+	private GameObject npcText;
+	public GameObject actionableObject;
+	private GameObject heldItem;
+	private Vector3 movement;
+
+	public Slider healthSlider;
+	public Slider magicSlider;
+
+	void Awake ()
+	{
+		npcText = GameObject.Find ("NPC Text");
+
+		cc = GetComponent<CharacterController> ();
+		ci = GetComponent<ControllerInput> ();
+
+//		Camera.main.GetComponent<SmoothCam2d> ().followedObject = transform;
+	}
+		
+	// Use this for initialization
+	void Start ()
+	{
 	
+	}
+
 	public class Player : MonoBehaviour
 	{
 
