@@ -1,12 +1,26 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerNetworkController.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NetworkTutorial.cs">
     <Files>
-      <File FileName="Assets/Scripts/NetworkManager.cs" Line="31" Column="51" />
-      <File FileName="../fps/Assets/Scripts/NetworkManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonUserControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NetworkTutorial.cs" Line="321" Column="68" />
+      <File FileName="Assets/Scripts/Interactable.cs" Line="40" Column="76" />
+      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ControllerInput.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NetworkManager.cs" Line="34" Column="38" />
+      <File FileName="Assets/Photon Unity Networking/Demos/DemoPickup/Scripts/PickupController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Photon Unity Networking/Demos/DemoPickup/Scripts/OnPickedUpScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Photon Unity Networking/Demos/DemoPickup/Scripts/PickupTriggerForward.cs" Line="1" Column="1" />
+      <File FileName="Assets/Photon Unity Networking/Demos/DemoPickup/Scripts/PickupDemoGui.cs" Line="1" Column="1" />
+      <File FileName="Assets/Photon Unity Networking/Demos/DemoPickup/Scripts/PickupCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets/Photon Unity Networking/UtilityScripts/PickupItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Photon Unity Networking/UtilityScripts/PickupItemSimple.cs" Line="1" Column="1" />
+      <File FileName="Assets/Photon Unity Networking/UtilityScripts/OnJoinedInstantiate.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerNetworkController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonCharacter.cs" Line="10" Column="15" />
+      <File FileName="Assets/Scripts/GameEngine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item.cs" Line="35" Column="3" />
+      <File FileName="Assets/Scripts/NPC.cs" Line="1" Column="1" />
+      <File FileName="Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Weapon.cs" Line="19" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

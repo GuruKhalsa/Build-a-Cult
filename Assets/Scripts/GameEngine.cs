@@ -16,16 +16,16 @@ public class GameEngine : MonoBehaviour {
 
 
 		//GameObject self = PhotonNetwork.Instantiate ("Player", GameObject.Find("Spawn Point").transform.position, Quaternion.identity, 0);
-		GameObject self = Instantiate (Resources.Load("Player"), spawns[spawnPoint].transform.position, Quaternion.identity) as GameObject;
+//		GameObject self = Instantiate (Resources.Load("Player"), spawns[spawnPoint].transform.position, Quaternion.identity) as GameObject;
 
-		for (int i = 0; i < spawns.Length; i++) {
-		
-			int itemIndex = Random.Range((-spawnableObjects.Length/2), spawnableObjects.Length);
-			if(itemIndex > -1){
-			Instantiate (spawnableObjects[itemIndex], spawns[i].transform.position, Quaternion.identity);
-			}
-
-		}
+//		for (int i = 0; i < spawns.Length; i++) {
+//		
+//			int itemIndex = Random.Range((-spawnableObjects.Length/2), spawnableObjects.Length);
+//			if(itemIndex > -1){
+//			Instantiate (spawnableObjects[itemIndex], spawns[i].transform.position, Quaternion.identity);
+//			}
+//
+//		}
 
 		//make if note for if player is owner of all objects to maintain while playing
 

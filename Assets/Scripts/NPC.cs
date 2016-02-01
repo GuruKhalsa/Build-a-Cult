@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour {
 
 		int charAmount = Random.Range(3, 16); //set those to the minimum and maximum length of your string
 
-		ritualRequest = "<color=#" + ColorToHex (itemColor [itemSelection]) + ">";
+//		ritualRequest = "<color=#" + ColorToHex (itemColor [itemSelection]) + ">";
 
 		for(int i=0; i<charAmount; i++)
 		{

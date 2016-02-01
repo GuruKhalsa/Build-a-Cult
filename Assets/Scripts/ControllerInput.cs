@@ -91,14 +91,14 @@ public class ControllerInput : MonoBehaviour {
 
 	public float movementX(){
 
-		return Input.GetAxis ("X1");
+		return Input.GetAxis ("Horizontal");
 
 
 	}
 
 	public float movementY(){
 		
-		return Input.GetAxis ("Y1");
+		return Input.GetAxis ("Vertical");
 
 
 	}

@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 		cc = GetComponent<CharacterController> ();
 		ci = GetComponent<ControllerInput> ();
 
-		Camera.main.GetComponent<Follow> ().followedObject = transform;
+//		Camera.main.GetComponent<SmoothCam2d> ().followedObject = transform;
 	}
 		
 	// Use this for initialization
